@@ -56,7 +56,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm --filter=deemix-gui exec pnpm electron-rebuild
 
-      - run: pnpm make
+      - run: pnpm make --arch x64,arm64
 
       - name: Upload Artifacts
         uses: softprops/action-gh-release@v2
